@@ -36,7 +36,7 @@ namespace LambdaForums.Controllers
                 Replies = replies
             };
 
-            return View();
+            return View(model);
         }
 
         private IEnumerable<PostReplyModel> BuildPostReplies(IEnumerable<PostReply> replies)
