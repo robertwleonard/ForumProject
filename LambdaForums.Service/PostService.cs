@@ -43,7 +43,7 @@ namespace LambdaForums.Service
 
         public Post GetById(int id)
         {
-            return _context.Posts.Where(Post => Post.Id == id)
+            return _context.Posts.Where(post => post.Id == id)
                 .Include(post => post.User)
                 .Include(post => post.Replies).ThenInclude(reply => reply.User)
                 .Include(post => post.Forum)
